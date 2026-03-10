@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Rental Platform Survey — Tanzania</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <div class="page-wrap">
+    <header class="survey-header">
+      <div class="header-inner">
+        <h1 class="survey-title">House Rental Platform Survey</h1>
+        <p class="survey-subtitle">Tanzania — Understanding demand for a digital rental platform</p>
+        <p class="survey-purpose">Your responses are confidential and will help shape a better way to find or list rental houses.</p>
+      </div>
+    </header>
+
+    <main class="survey-main">
+      <form id="survey-form" class="survey-form" novalidate>
+        <!-- Section 1: Respondent Details -->
+        <section class="form-section section-respondent" id="section-respondent">
+          <h2 class="section-title">Respondent details</h2>
+
+          <div class="field-group">
+            <label for="name">Name <span class="optional">(optional)</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="age">Age</label>
+              <input type="number" id="age" name="age" min="18" max="120" placeholder="e.g. 28">
+            </div>
+            <div class="field-group">
+              <label for="location">Location (City / Town)</label>
+              <input type="text" id="location" name="location" placeholder="e.g. Dar es Salaam" autocomplete="address-level2">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <div class="radio-group" role="radiogroup" aria-label="Gender">
+              <label class="radio-option">
+                <input type="radio" name="gender" value="male">
+                <span class="radio-label">Male</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="gender" value="female">
+                <span class="radio-label">Female</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="gender" value="prefer-not">
+                <span class="radio-label">Prefer not to say</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group field-role">
+            <label>Are you</label>
+            <div class="role-cards" role="radiogroup" aria-label="Respondent type">
+              <label class="role-card">
+                <input type="radio" name="respondent_type" value="tenant">
+                <span class="role-card-inner">
+                  <span class="role-icon" aria-hidden="true">🏠</span>
+                  <span class="role-text">Looking for a rental house <em>(Tenant)</em></span>
+                </span>
+              </label>
+              <label class="role-card">
+                <input type="radio" name="respondent_type" value="vendor">
+                <span class="role-card-inner">
+                  <span class="role-icon" aria-hidden="true">🔑</span>
+                  <span class="role-text">Renting out a property <em>(House Owner / Vendor)</em></span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: For Tenants -->
+        <section class="form-section section-tenant" id="section-tenant" hidden>
+          <h2 class="section-title">For individuals seeking rental houses</h2>
+
+          <div class="field-group">
+            <label>How often do you look for rental houses?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="tenant_frequency" value="frequently">
+                <span class="radio-label">Frequently (every month)</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tenant_frequency" value="occasionally">
+                <span class="radio-label">Occasionally (every 3–6 months)</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tenant_frequency" value="rarely">
+                <span class="radio-label">Rarely (less than once a year)</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>What methods do you currently use to find houses for rent? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_methods" value="word-of-mouth">
+                <span class="check-label">Word of mouth / Friends</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_methods" value="real-estate-agents">
+                <span class="check-label">Real estate agents</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_methods" value="social-media">
+                <span class="check-label">Social media (Facebook, Instagram, WhatsApp, etc.)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_methods" value="classifieds">
+                <span class="check-label">Classified websites / Apps</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_methods" value="walking">
+                <span class="check-label">Walking around neighborhoods</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>What challenges do you face when looking for rental houses? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_challenges" value="high-prices">
+                <span class="check-label">High rental prices / Hidden costs</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_challenges" value="limited-options">
+                <span class="check-label">Limited house options</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_challenges" value="poor-info">
+                <span class="check-label">Poor information about the property</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_challenges" value="untrusted-landlords">
+                <span class="check-label">Difficulty finding trusted landlords</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_challenges" value="location">
+                <span class="check-label">Location / Accessibility issues</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="tenant_challenges" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="tenant_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>How important are the following when searching? <span class="hint">1 = Not important, 5 = Very important</span></label>
+            <div class="scale-grid">
+              <div class="scale-row">
+                <span class="scale-label">Price transparency</span>
+                <div class="scale-options">
+                  <label><input type="radio" name="tenant_importance_price" value="1"><span>1</span></label>
+                  <label><input type="radio" name="tenant_importance_price" value="2"><span>2</span></label>
+                  <label><input type="radio" name="tenant_importance_price" value="3"><span>3</span></label>
+                  <label><input type="radio" name="tenant_importance_price" value="4"><span>4</span></label>
+                  <label><input type="radio" name="tenant_importance_price" value="5"><span>5</span></label>
+                </div>
+              </div>
+              <div class="scale-row">
+                <span class="scale-label">Verified property information</span>
+                <div class="scale-options">
+                  <label><input type="radio" name="tenant_importance_verified" value="1"><span>1</span></label>
+                  <label><input type="radio" name="tenant_importance_verified" value="2"><span>2</span></label>
+                  <label><input type="radio" name="tenant_importance_verified" value="3"><span>3</span></label>
+                  <label><input type="radio" name="tenant_importance_verified" value="4"><span>4</span></label>
+                  <label><input type="radio" name="tenant_importance_verified" value="5"><span>5</span></label>
+                </div>
+              </div>
+              <div class="scale-row">
+                <span class="scale-label">Location details (maps, nearby services)</span>
+                <div class="scale-options">
+                  <label><input type="radio" name="tenant_importance_location" value="1"><span>1</span></label>
+                  <label><input type="radio" name="tenant_importance_location" value="2"><span>2</span></label>
+                  <label><input type="radio" name="tenant_importance_location" value="3"><span>3</span></label>
+                  <label><input type="radio" name="tenant_importance_location" value="4"><span>4</span></label>
+                  <label><input type="radio" name="tenant_importance_location" value="5"><span>5</span></label>
+                </div>
+              </div>
+              <div class="scale-row">
+                <span class="scale-label">Photos and videos of the property</span>
+                <div class="scale-options">
+                  <label><input type="radio" name="tenant_importance_photos" value="1"><span>1</span></label>
+                  <label><input type="radio" name="tenant_importance_photos" value="2"><span>2</span></label>
+                  <label><input type="radio" name="tenant_importance_photos" value="3"><span>3</span></label>
+                  <label><input type="radio" name="tenant_importance_photos" value="4"><span>4</span></label>
+                  <label><input type="radio" name="tenant_importance_photos" value="5"><span>5</span></label>
+                </div>
+              </div>
+              <div class="scale-row">
+                <span class="scale-label">Online booking or reservation</span>
+                <div class="scale-options">
+                  <label><input type="radio" name="tenant_importance_booking" value="1"><span>1</span></label>
+                  <label><input type="radio" name="tenant_importance_booking" value="2"><span>2</span></label>
+                  <label><input type="radio" name="tenant_importance_booking" value="3"><span>3</span></label>
+                  <label><input type="radio" name="tenant_importance_booking" value="4"><span>4</span></label>
+                  <label><input type="radio" name="tenant_importance_booking" value="5"><span>5</span></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Would you use a digital platform to search and view verified rental houses near you?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="tenant_willing" value="yes">
+                <span class="radio-label">Yes</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tenant_willing" value="no">
+                <span class="radio-label">No</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tenant_willing" value="maybe">
+                <span class="radio-label">Maybe</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group field-conditional" data-show-when="tenant_willing" data-show-values="yes,maybe">
+            <label>What would encourage you to use the platform? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_encourage" value="affordable">
+                <span class="check-label">Affordable subscription / free service</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_encourage" value="variety">
+                <span class="check-label">Wide variety of properties</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_encourage" value="accurate-info">
+                <span class="check-label">Accurate and detailed property information</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="tenant_encourage" value="secure">
+                <span class="check-label">Secure and reliable transactions</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: For Vendors -->
+        <section class="form-section section-vendor" id="section-vendor" hidden>
+          <h2 class="section-title">For house owners / vendors</h2>
+
+          <div class="field-group">
+            <label>How do you currently find tenants for your properties? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_methods" value="real-estate-agents">
+                <span class="check-label">Real estate agents</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_methods" value="word-of-mouth">
+                <span class="check-label">Word of mouth / Friends</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_methods" value="social-media">
+                <span class="check-label">Social media platforms</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_methods" value="classifieds">
+                <span class="check-label">Classified websites / Apps</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="vendor_methods" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="vendor_methods_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>What challenges do you face when renting out your property? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_challenges" value="vacancy">
+                <span class="check-label">Long vacancy periods</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_challenges" value="trusted-tenants">
+                <span class="check-label">Difficulty finding trusted tenants</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_challenges" value="payments">
+                <span class="check-label">Delayed or missed payments</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_challenges" value="multiple-properties">
+                <span class="check-label">Managing multiple properties</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_challenges" value="advertising">
+                <span class="check-label">Advertising costs</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="vendor_challenges" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="vendor_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Would you list your property (location, photos, prices) on a digital platform for potential tenants?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="vendor_willing" value="yes">
+                <span class="radio-label">Yes</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vendor_willing" value="no">
+                <span class="radio-label">No</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vendor_willing" value="maybe">
+                <span class="radio-label">Maybe</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group field-conditional" data-show-when="vendor_willing" data-show-values="yes,maybe">
+            <label>Which features would you want on the platform? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_features" value="easy-upload">
+                <span class="check-label">Easy property upload and management</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_features" value="tenant-verification">
+                <span class="check-label">Tenant verification system</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_features" value="online-payment">
+                <span class="check-label">Online rent payment collection</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_features" value="booking">
+                <span class="check-label">Booking / reservation system</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="vendor_features" value="analytics">
+                <span class="check-label">Analytics on property views and interest</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>What would motivate you most to list on this platform?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="vendor_motivation" value="visibility">
+                <span class="radio-label">More visibility and tenants</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vendor_motivation" value="reduced-vacancy">
+                <span class="radio-label">Reduced vacancy periods</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vendor_motivation" value="secure-tenants">
+                <span class="radio-label">Secure and verified tenants</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="vendor_motivation" value="management">
+                <span class="radio-label">Easy property management</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Final Feedback -->
+        <section class="form-section section-final" id="section-final" hidden>
+          <h2 class="section-title">Final feedback</h2>
+          <div class="field-group">
+            <label for="suggestions">Suggestions for features or services you’d like on a house rental platform</label>
+            <textarea id="suggestions" name="suggestions" rows="5" placeholder="Share your ideas…"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit survey</button>
+          </div>
+        </section>
+      </form>
+
+      <div class="confirmation" id="confirmation" hidden>
+        <div class="confirmation-inner">
+          <div class="confirmation-icon" aria-hidden="true">✓</div>
+          <h2 class="confirmation-title">Thank you</h2>
+          <p class="confirmation-text">Your response has been recorded. Your feedback helps us understand demand for a better house rental platform in Tanzania.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="survey-footer">
+      <p>Confidential • Tanzania House Rental Survey</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
