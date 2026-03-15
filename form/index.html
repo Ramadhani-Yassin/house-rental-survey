@@ -13,10 +13,13 @@
   <div class="page-bg" aria-hidden="true"></div>
   <div class="page-wrap">
     <header class="survey-header">
+      <div class="lang-toggle-wrap">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Change language">Translate to Swahili</button>
+      </div>
       <div class="header-inner">
-        <h1 class="survey-title">House Rental Platform Survey</h1>
-        <p class="survey-subtitle">Tanzania — Understanding demand for a digital rental platform</p>
-        <p class="survey-purpose">Your responses are confidential and will help shape a better way to find or list rental houses.</p>
+        <h1 class="survey-title" data-i18n="title">House Rental Platform Survey</h1>
+        <p class="survey-subtitle" data-i18n="subtitle">Tanzania — Understanding demand for a digital rental platform</p>
+        <p class="survey-purpose" data-i18n="purpose">Your responses are confidential and will help shape a better way to find or list rental houses.</p>
       </div>
     </header>
 
@@ -24,57 +27,57 @@
       <form id="survey-form" class="survey-form" novalidate>
         <!-- Section 1: Respondent Details -->
         <section class="form-section section-respondent" id="section-respondent">
-          <h2 class="section-title">Respondent details</h2>
+          <h2 class="section-title" data-i18n="respondentDetails">Respondent details</h2>
 
           <div class="field-group">
-            <label for="name">Name <span class="optional">(optional)</span></label>
+            <label for="name"><span data-i18n="name">Name</span> <span class="optional" data-i18n="optional">(optional)</span></label>
             <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
           </div>
 
           <div class="field-row">
             <div class="field-group">
-              <label for="age">Age</label>
+              <label for="age" data-i18n="age">Age</label>
               <input type="number" id="age" name="age" min="18" max="120" placeholder="e.g. 28">
             </div>
             <div class="field-group">
-              <label for="location">Location (City / Town)</label>
+              <label for="location" data-i18n="location">Location (City / Town)</label>
               <input type="text" id="location" name="location" placeholder="e.g. Dar es Salaam" autocomplete="address-level2">
             </div>
           </div>
 
           <div class="field-group">
-            <label>Gender</label>
+            <label data-i18n="gender">Gender</label>
             <div class="radio-group" role="radiogroup" aria-label="Gender">
               <label class="radio-option">
                 <input type="radio" name="gender" value="male">
-                <span class="radio-label">Male</span>
+                <span class="radio-label" data-i18n="male">Male</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="gender" value="female">
-                <span class="radio-label">Female</span>
+                <span class="radio-label" data-i18n="female">Female</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="gender" value="prefer-not">
-                <span class="radio-label">Prefer not to say</span>
+                <span class="radio-label" data-i18n="preferNot">Prefer not to say</span>
               </label>
             </div>
           </div>
 
           <div class="field-group field-role">
-            <label>Are you</label>
+            <label data-i18n="areYou">Are you</label>
             <div class="role-cards" role="radiogroup" aria-label="Respondent type">
               <label class="role-card">
                 <input type="radio" name="respondent_type" value="tenant">
                 <span class="role-card-inner">
                   <span class="role-icon" aria-hidden="true">🏠</span>
-                  <span class="role-text">Looking for a rental house <em>(Tenant)</em></span>
+                  <span class="role-text"><span data-i18n="tenantRole">Looking for a rental house</span> <em data-i18n="tenantRoleEm">(Tenant)</em></span>
                 </span>
               </label>
               <label class="role-card">
                 <input type="radio" name="respondent_type" value="vendor">
                 <span class="role-card-inner">
                   <span class="role-icon" aria-hidden="true">🔑</span>
-                  <span class="role-text">Renting out a property <em>(House Owner / Vendor)</em></span>
+                  <span class="role-text"><span data-i18n="vendorRole">Renting out a property</span> <em data-i18n="vendorRoleEm">(House Owner / Vendor)</em></span>
                 </span>
               </label>
             </div>
@@ -83,7 +86,7 @@
 
         <!-- Section 2: For Tenants -->
         <section class="form-section section-tenant" id="section-tenant" hidden>
-          <h2 class="section-title">For individuals seeking rental houses</h2>
+          <h2 class="section-title" data-i18n="sectionTenant">For individuals seeking rental houses</h2>
 
           <div class="field-group">
             <label>How often do you look for rental houses?</label>
@@ -257,9 +260,37 @@
           </div>
         </section>
 
-        <!-- Section 3: For Vendors -->
-        <section class="form-section section-vendor" id="section-vendor" hidden>
-          <h2 class="section-title">For house owners / vendors</h2>
+        <!-- Section 3a: Vendor type (House rental / Airbnb / Land seller) -->
+        <section class="form-section section-vendor-type" id="section-vendor-type" hidden>
+          <h2 class="section-title" data-i18n="vendorTypeTitle">What type of property do you offer?</h2>
+          <div class="vendor-subtype-cards" role="radiogroup" aria-label="Vendor type">
+            <label class="role-card vendor-subtype-card">
+              <input type="radio" name="vendor_subtype" value="house_rental">
+              <span class="role-card-inner">
+                <span class="role-icon" aria-hidden="true">🏠</span>
+                <span class="role-text" data-i18n="vendorHouseRental">House rental</span>
+              </span>
+            </label>
+            <label class="role-card vendor-subtype-card">
+              <input type="radio" name="vendor_subtype" value="airbnb_owner">
+              <span class="role-card-inner">
+                <span class="role-icon" aria-hidden="true">🛏️</span>
+                <span class="role-text" data-i18n="vendorAirbnb">Airbnb owner</span>
+              </span>
+            </label>
+            <label class="role-card vendor-subtype-card">
+              <input type="radio" name="vendor_subtype" value="land_seller">
+              <span class="role-card-inner">
+                <span class="role-icon" aria-hidden="true">🏞️</span>
+                <span class="role-text" data-i18n="vendorLandSeller">Land seller</span>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Section 3b: For House rental vendors -->
+        <section class="form-section section-vendor section-vendor-house" id="section-vendor-house" hidden>
+          <h2 class="section-title" data-i18n="vendorHouseTitle">For house rental (long-term)</h2>
 
           <div class="field-group">
             <label>How do you currently find tenants for your properties? <span class="hint">Select all that apply</span></label>
@@ -386,15 +417,205 @@
           </div>
         </section>
 
+        <!-- Section 3c: For Airbnb owners -->
+        <section class="form-section section-vendor section-vendor-airbnb" id="section-vendor-airbnb" hidden>
+          <h2 class="section-title">For Airbnb / short-term rental owners</h2>
+          <div class="field-group">
+            <label>How do you currently find guests for your short-term rental? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_methods" value="airbnb-app">
+                <span class="check-label">Airbnb or similar apps</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_methods" value="social-media">
+                <span class="check-label">Social media</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_methods" value="word-of-mouth">
+                <span class="check-label">Word of mouth</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_methods" value="travel-agents">
+                <span class="check-label">Travel agents / tour operators</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="airbnb_methods" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="airbnb_methods_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>What challenges do you face with short-term rentals? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_challenges" value="seasonal">
+                <span class="check-label">Seasonal demand / low occupancy</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_challenges" value="guest-trust">
+                <span class="check-label">Finding trusted guests</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_challenges" value="commission">
+                <span class="check-label">High commission fees from platforms</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_challenges" value="maintenance">
+                <span class="check-label">Maintenance between guests</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="airbnb_challenges" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="airbnb_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Would you use a Tanzania-focused platform to list your short-term rental alongside long-term options?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="airbnb_willing" value="yes">
+                <span class="radio-label">Yes</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="airbnb_willing" value="no">
+                <span class="radio-label">No</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="airbnb_willing" value="maybe">
+                <span class="radio-label">Maybe</span>
+              </label>
+            </div>
+          </div>
+          <div class="field-group field-conditional" data-show-when="airbnb_willing" data-show-values="yes,maybe">
+            <label>Which features would matter most? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_features" value="lower-fees">
+                <span class="check-label">Lower fees than international platforms</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_features" value="local-payments">
+                <span class="check-label">Local payment methods (M-Pesa, etc.)</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_features" value="booking-calendar">
+                <span class="check-label">Booking and calendar management</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="airbnb_features" value="reviews">
+                <span class="check-label">Guest reviews and ratings</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3d: For Land sellers -->
+        <section class="form-section section-vendor section-vendor-land" id="section-vendor-land" hidden>
+          <h2 class="section-title">For land sellers</h2>
+          <div class="field-group">
+            <label>How do you currently find buyers for your land? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_methods" value="agents">
+                <span class="check-label">Real estate / land agents</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_methods" value="social-media">
+                <span class="check-label">Social media</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_methods" value="word-of-mouth">
+                <span class="check-label">Word of mouth</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_methods" value="signboards">
+                <span class="check-label">Signboards / physical ads</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="land_methods" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="land_methods_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>What challenges do you face when selling land? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_challenges" value="finding-buyers">
+                <span class="check-label">Difficulty finding serious buyers</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_challenges" value="pricing">
+                <span class="check-label">Unclear pricing / valuations</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_challenges" value="documents">
+                <span class="check-label">Documentation and legal process</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_challenges" value="scams">
+                <span class="check-label">Fear of scams or fraud</span>
+              </label>
+              <label class="checkbox-option checkbox-with-other">
+                <input type="checkbox" name="land_challenges" value="other" data-other-trigger>
+                <span class="check-label">Other</span>
+                <input type="text" name="land_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+              </label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Would you list your land (location, size, price, photos) on a digital platform for potential buyers?</label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="land_willing" value="yes">
+                <span class="radio-label">Yes</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="land_willing" value="no">
+                <span class="radio-label">No</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="land_willing" value="maybe">
+                <span class="radio-label">Maybe</span>
+              </label>
+            </div>
+          </div>
+          <div class="field-group field-conditional" data-show-when="land_willing" data-show-values="yes,maybe">
+            <label>Which features would you want? <span class="hint">Select all that apply</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_features" value="verified-listings">
+                <span class="check-label">Verified land titles / documentation</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_features" value="maps">
+                <span class="check-label">Maps and location details</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_features" value="buyer-verification">
+                <span class="check-label">Buyer verification and safe transactions</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="land_features" value="legal-support">
+                <span class="check-label">Legal and transfer support</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
         <!-- Section 4: Final Feedback -->
         <section class="form-section section-final" id="section-final" hidden>
-          <h2 class="section-title">Final feedback</h2>
+          <h2 class="section-title" data-i18n="sectionFinal">Final feedback</h2>
           <div class="field-group">
-            <label for="suggestions">Suggestions for features or services you’d like on a house rental platform</label>
-            <textarea id="suggestions" name="suggestions" rows="5" placeholder="Share your ideas…"></textarea>
+            <label for="suggestions" data-i18n="suggestionsLabel">Suggestions for features or services you’d like on a house rental platform</label>
+            <textarea id="suggestions" name="suggestions" rows="5" data-i18n-placeholder="suggestionsPlaceholder" placeholder="Share your ideas…"></textarea>
           </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit survey</button>
+            <button type="submit" class="btn btn-primary" data-i18n="submitSurvey">Submit survey</button>
           </div>
         </section>
       </form>
@@ -402,14 +623,14 @@
       <div class="confirmation" id="confirmation" hidden>
         <div class="confirmation-inner">
           <div class="confirmation-icon" aria-hidden="true">✓</div>
-          <h2 class="confirmation-title">Thank you</h2>
-          <p class="confirmation-text">Your response has been recorded. Your feedback helps us understand demand for a better house rental platform in Tanzania.</p>
+          <h2 class="confirmation-title" data-i18n="thankYou">Thank you</h2>
+          <p class="confirmation-text" data-i18n="confirmationText">Your response has been recorded. Your feedback helps us understand demand for a better house rental platform in Tanzania.</p>
         </div>
       </div>
     </main>
 
     <footer class="survey-footer">
-      <p>Confidential • Tanzania House Rental Survey</p>
+      <p data-i18n="footer">Confidential • Tanzania House Rental Survey</p>
     </footer>
   </div>
   <script src="script.js"></script>

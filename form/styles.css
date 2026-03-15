@@ -88,6 +88,28 @@ body {
 }
 
 /* ----- Header ----- */
+.lang-toggle-wrap {
+  text-align: right;
+  margin-bottom: 0.75rem;
+}
+
+.lang-toggle {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 .survey-header {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
@@ -295,6 +317,23 @@ textarea {
   font-style: italic;
   font-weight: 400;
   color: var(--color-text-muted);
+}
+
+/* Vendor subtype: 3 cards in a row */
+.vendor-subtype-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 620px) {
+  .vendor-subtype-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.vendor-subtype-card .role-card-inner {
+  padding: 1rem 0.75rem;
 }
 
 /* ----- Radio & checkbox groups ----- */
