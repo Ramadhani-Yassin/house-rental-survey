@@ -86,85 +86,85 @@
           <h2 class="section-title" data-i18n="sectionTenant">For individuals seeking rental houses</h2>
 
           <div class="field-group">
-            <label>How often do you look for rental houses?</label>
+            <label><span data-i18n="tenantFrequency">How often do you look for rental houses?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="tenant_frequency" value="frequently">
-                <span class="radio-label">Frequently (every month)</span>
+                <span class="radio-label" data-i18n="tenantFreqFrequently">Frequently (every month)</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="tenant_frequency" value="occasionally">
-                <span class="radio-label">Occasionally (every 3–6 months)</span>
+                <span class="radio-label" data-i18n="tenantFreqOccasionally">Occasionally (every 3–6 months)</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="tenant_frequency" value="rarely">
-                <span class="radio-label">Rarely (less than once a year)</span>
+                <span class="radio-label" data-i18n="tenantFreqRarely">Rarely (less than once a year)</span>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>What methods do you currently use to find houses for rent? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="tenantMethods">What methods do you currently use to find houses for rent?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_methods" value="word-of-mouth">
-                <span class="check-label">Word of mouth / Friends</span>
+                <span class="check-label" data-i18n="tenantMethWord">Word of mouth / Friends</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_methods" value="real-estate-agents">
-                <span class="check-label">Real estate agents</span>
+                <span class="check-label" data-i18n="tenantMethAgents">Real estate agents</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_methods" value="social-media">
-                <span class="check-label">Social media (Facebook, Instagram, WhatsApp, etc.)</span>
+                <span class="check-label" data-i18n="tenantMethSocial">Social media (Facebook, Instagram, WhatsApp, etc.)</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_methods" value="classifieds">
-                <span class="check-label">Classified websites / Apps</span>
+                <span class="check-label" data-i18n="tenantMethClassified">Classified websites / Apps</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_methods" value="walking">
-                <span class="check-label">Walking around neighborhoods</span>
+                <span class="check-label" data-i18n="tenantMethWalking">Walking around neighborhoods</span>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>What challenges do you face when looking for rental houses? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="tenantChallenges">What challenges do you face when looking for rental houses?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_challenges" value="high-prices">
-                <span class="check-label">High rental prices / Hidden costs</span>
+                <span class="check-label" data-i18n="tenantChHighPrices">High rental prices / Hidden costs</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_challenges" value="limited-options">
-                <span class="check-label">Limited house options</span>
+                <span class="check-label" data-i18n="tenantChLimited">Limited house options</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_challenges" value="poor-info">
-                <span class="check-label">Poor information about the property</span>
+                <span class="check-label" data-i18n="tenantChPoorInfo">Poor information about the property</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_challenges" value="untrusted-landlords">
-                <span class="check-label">Difficulty finding trusted landlords</span>
+                <span class="check-label" data-i18n="tenantChLandlords">Difficulty finding trusted landlords</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_challenges" value="location">
-                <span class="check-label">Location / Accessibility issues</span>
+                <span class="check-label" data-i18n="tenantChLocation">Location / Accessibility issues</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="tenant_challenges" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="tenant_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="tenant_challenges_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>How important are the following when searching? <span class="hint">1 = Not important, 5 = Very important</span></label>
+            <label><span data-i18n="tenantImportance">How important are the following when searching?</span> <span class="hint" data-i18n="scaleHint">1 = Not important, 5 = Very important</span></label>
             <div class="scale-grid">
               <div class="scale-row">
-                <span class="scale-label">Price transparency</span>
+                <span class="scale-label" data-i18n="tenantImpPrice">Price transparency</span>
                 <div class="scale-options">
                   <label><input type="radio" name="tenant_importance_price" value="1"><span>1</span></label>
                   <label><input type="radio" name="tenant_importance_price" value="2"><span>2</span></label>
@@ -174,7 +174,7 @@
                 </div>
               </div>
               <div class="scale-row">
-                <span class="scale-label">Verified property information</span>
+                <span class="scale-label" data-i18n="tenantImpVerified">Verified property information</span>
                 <div class="scale-options">
                   <label><input type="radio" name="tenant_importance_verified" value="1"><span>1</span></label>
                   <label><input type="radio" name="tenant_importance_verified" value="2"><span>2</span></label>
@@ -184,7 +184,7 @@
                 </div>
               </div>
               <div class="scale-row">
-                <span class="scale-label">Location details (maps, nearby services)</span>
+                <span class="scale-label" data-i18n="tenantImpLocation">Location details (maps, nearby services)</span>
                 <div class="scale-options">
                   <label><input type="radio" name="tenant_importance_location" value="1"><span>1</span></label>
                   <label><input type="radio" name="tenant_importance_location" value="2"><span>2</span></label>
@@ -194,7 +194,7 @@
                 </div>
               </div>
               <div class="scale-row">
-                <span class="scale-label">Photos and videos of the property</span>
+                <span class="scale-label" data-i18n="tenantImpPhotos">Photos and videos of the property</span>
                 <div class="scale-options">
                   <label><input type="radio" name="tenant_importance_photos" value="1"><span>1</span></label>
                   <label><input type="radio" name="tenant_importance_photos" value="2"><span>2</span></label>
@@ -204,7 +204,7 @@
                 </div>
               </div>
               <div class="scale-row">
-                <span class="scale-label">Online booking or reservation</span>
+                <span class="scale-label" data-i18n="tenantImpBooking">Online booking or reservation</span>
                 <div class="scale-options">
                   <label><input type="radio" name="tenant_importance_booking" value="1"><span>1</span></label>
                   <label><input type="radio" name="tenant_importance_booking" value="2"><span>2</span></label>
@@ -217,41 +217,41 @@
           </div>
 
           <div class="field-group">
-            <label>Would you use a digital platform to search and view verified rental houses near you?</label>
+            <label><span data-i18n="tenantWilling">Would you use a digital platform to search and view verified rental houses near you?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="tenant_willing" value="yes">
-                <span class="radio-label">Yes</span>
+                <span class="radio-label" data-i18n="yes">Yes</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="tenant_willing" value="no">
-                <span class="radio-label">No</span>
+                <span class="radio-label" data-i18n="no">No</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="tenant_willing" value="maybe">
-                <span class="radio-label">Maybe</span>
+                <span class="radio-label" data-i18n="maybe">Maybe</span>
               </label>
             </div>
           </div>
 
           <div class="field-group field-conditional" data-show-when="tenant_willing" data-show-values="yes,maybe">
-            <label>What would encourage you to use the platform? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="tenantEncourage">What would encourage you to use the platform?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_encourage" value="affordable">
-                <span class="check-label">Affordable subscription / free service</span>
+                <span class="check-label" data-i18n="tenantEncAffordable">Affordable subscription / free service</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_encourage" value="variety">
-                <span class="check-label">Wide variety of properties</span>
+                <span class="check-label" data-i18n="tenantEncVariety">Wide variety of properties</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_encourage" value="accurate-info">
-                <span class="check-label">Accurate and detailed property information</span>
+                <span class="check-label" data-i18n="tenantEncAccurate">Accurate and detailed property information</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="tenant_encourage" value="secure">
-                <span class="check-label">Secure and reliable transactions</span>
+                <span class="check-label" data-i18n="tenantEncSecure">Secure and reliable transactions</span>
               </label>
             </div>
           </div>
@@ -290,125 +290,125 @@
           <h2 class="section-title" data-i18n="vendorHouseTitle">For house rental (long-term)</h2>
 
           <div class="field-group">
-            <label>How do you currently find tenants for your properties? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="vendorMethods">How do you currently find tenants for your properties?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_methods" value="real-estate-agents">
-                <span class="check-label">Real estate agents</span>
+                <span class="check-label" data-i18n="tenantMethAgents">Real estate agents</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_methods" value="word-of-mouth">
-                <span class="check-label">Word of mouth / Friends</span>
+                <span class="check-label" data-i18n="tenantMethWord">Word of mouth / Friends</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_methods" value="social-media">
-                <span class="check-label">Social media platforms</span>
+                <span class="check-label" data-i18n="tenantMethSocial">Social media platforms</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_methods" value="classifieds">
-                <span class="check-label">Classified websites / Apps</span>
+                <span class="check-label" data-i18n="tenantMethClassified">Classified websites / Apps</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="vendor_methods" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="vendor_methods_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="vendor_methods_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>What challenges do you face when renting out your property? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="vendorChallenges">What challenges do you face when renting out your property?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_challenges" value="vacancy">
-                <span class="check-label">Long vacancy periods</span>
+                <span class="check-label" data-i18n="vendorChVacancy">Long vacancy periods</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_challenges" value="trusted-tenants">
-                <span class="check-label">Difficulty finding trusted tenants</span>
+                <span class="check-label" data-i18n="vendorChTenants">Difficulty finding trusted tenants</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_challenges" value="payments">
-                <span class="check-label">Delayed or missed payments</span>
+                <span class="check-label" data-i18n="vendorChPayments">Delayed or missed payments</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_challenges" value="multiple-properties">
-                <span class="check-label">Managing multiple properties</span>
+                <span class="check-label" data-i18n="vendorChMultiple">Managing multiple properties</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_challenges" value="advertising">
-                <span class="check-label">Advertising costs</span>
+                <span class="check-label" data-i18n="vendorChAdvertising">Advertising costs</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="vendor_challenges" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="vendor_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="vendor_challenges_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>Would you list your property (location, photos, prices) on a digital platform for potential tenants?</label>
+            <label><span data-i18n="vendorWilling">Would you list your property (location, photos, prices) on a digital platform for potential tenants?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="vendor_willing" value="yes">
-                <span class="radio-label">Yes</span>
+                <span class="radio-label" data-i18n="yes">Yes</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="vendor_willing" value="no">
-                <span class="radio-label">No</span>
+                <span class="radio-label" data-i18n="no">No</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="vendor_willing" value="maybe">
-                <span class="radio-label">Maybe</span>
+                <span class="radio-label" data-i18n="maybe">Maybe</span>
               </label>
             </div>
           </div>
 
           <div class="field-group field-conditional" data-show-when="vendor_willing" data-show-values="yes,maybe">
-            <label>Which features would you want on the platform? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="vendorFeatures">Which features would you want on the platform?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_features" value="easy-upload">
-                <span class="check-label">Easy property upload and management</span>
+                <span class="check-label" data-i18n="vendorFeatUpload">Easy property upload and management</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_features" value="tenant-verification">
-                <span class="check-label">Tenant verification system</span>
+                <span class="check-label" data-i18n="vendorFeatVerification">Tenant verification system</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_features" value="online-payment">
-                <span class="check-label">Online rent payment collection</span>
+                <span class="check-label" data-i18n="vendorFeatPayment">Online rent payment collection</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_features" value="booking">
-                <span class="check-label">Booking / reservation system</span>
+                <span class="check-label" data-i18n="vendorFeatBooking">Booking / reservation system</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="vendor_features" value="analytics">
-                <span class="check-label">Analytics on property views and interest</span>
+                <span class="check-label" data-i18n="vendorFeatAnalytics">Analytics on property views and interest</span>
               </label>
             </div>
           </div>
 
           <div class="field-group">
-            <label>What would motivate you most to list on this platform?</label>
+            <label><span data-i18n="vendorMotivation">What would motivate you most to list on this platform?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="vendor_motivation" value="visibility">
-                <span class="radio-label">More visibility and tenants</span>
+                <span class="radio-label" data-i18n="vendorMotVisibility">More visibility and tenants</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="vendor_motivation" value="reduced-vacancy">
-                <span class="radio-label">Reduced vacancy periods</span>
+                <span class="radio-label" data-i18n="vendorMotVacancy">Reduced vacancy periods</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="vendor_motivation" value="secure-tenants">
-                <span class="radio-label">Secure and verified tenants</span>
+                <span class="radio-label" data-i18n="vendorMotSecure">Secure and verified tenants</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="vendor_motivation" value="management">
-                <span class="radio-label">Easy property management</span>
+                <span class="radio-label" data-i18n="vendorMotManagement">Easy property management</span>
               </label>
             </div>
           </div>
@@ -416,94 +416,94 @@
 
         <!-- Section 3c: For Airbnb owners -->
         <section class="form-section section-vendor section-vendor-airbnb" id="section-vendor-airbnb" hidden>
-          <h2 class="section-title">For Airbnb / short-term rental owners</h2>
+          <h2 class="section-title" data-i18n="vendorAirbnbTitle">For Airbnb / short-term rental owners</h2>
           <div class="field-group">
-            <label>How do you currently find guests for your short-term rental? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="airbnbMethods">How do you currently find guests for your short-term rental?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_methods" value="airbnb-app">
-                <span class="check-label">Airbnb or similar apps</span>
+                <span class="check-label" data-i18n="airbnbMethApp">Airbnb or similar apps</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_methods" value="social-media">
-                <span class="check-label">Social media</span>
+                <span class="check-label" data-i18n="airbnbMethSocial">Social media</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_methods" value="word-of-mouth">
-                <span class="check-label">Word of mouth</span>
+                <span class="check-label" data-i18n="airbnbMethWord">Word of mouth</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_methods" value="travel-agents">
-                <span class="check-label">Travel agents / tour operators</span>
+                <span class="check-label" data-i18n="airbnbMethTravel">Travel agents / tour operators</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="airbnb_methods" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="airbnb_methods_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="airbnb_methods_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
           <div class="field-group">
-            <label>What challenges do you face with short-term rentals? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="airbnbChallenges">What challenges do you face with short-term rentals?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_challenges" value="seasonal">
-                <span class="check-label">Seasonal demand / low occupancy</span>
+                <span class="check-label" data-i18n="airbnbChSeasonal">Seasonal demand / low occupancy</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_challenges" value="guest-trust">
-                <span class="check-label">Finding trusted guests</span>
+                <span class="check-label" data-i18n="airbnbChGuests">Finding trusted guests</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_challenges" value="commission">
-                <span class="check-label">High commission fees from platforms</span>
+                <span class="check-label" data-i18n="airbnbChCommission">High commission fees from platforms</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_challenges" value="maintenance">
-                <span class="check-label">Maintenance between guests</span>
+                <span class="check-label" data-i18n="airbnbChMaintenance">Maintenance between guests</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="airbnb_challenges" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="airbnb_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="airbnb_challenges_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
           <div class="field-group">
-            <label>Would you use a Tanzania-focused platform to list your short-term rental alongside long-term options?</label>
+            <label><span data-i18n="airbnbWilling">Would you use a Tanzania-focused platform to list your short-term rental alongside long-term options?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="airbnb_willing" value="yes">
-                <span class="radio-label">Yes</span>
+                <span class="radio-label" data-i18n="yes">Yes</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="airbnb_willing" value="no">
-                <span class="radio-label">No</span>
+                <span class="radio-label" data-i18n="no">No</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="airbnb_willing" value="maybe">
-                <span class="radio-label">Maybe</span>
+                <span class="radio-label" data-i18n="maybe">Maybe</span>
               </label>
             </div>
           </div>
           <div class="field-group field-conditional" data-show-when="airbnb_willing" data-show-values="yes,maybe">
-            <label>Which features would matter most? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="airbnbFeatures">Which features would matter most?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_features" value="lower-fees">
-                <span class="check-label">Lower fees than international platforms</span>
+                <span class="check-label" data-i18n="airbnbFeatFees">Lower fees than international platforms</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_features" value="local-payments">
-                <span class="check-label">Local payment methods (M-Pesa, etc.)</span>
+                <span class="check-label" data-i18n="airbnbFeatLocal">Local payment methods (M-Pesa, etc.)</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_features" value="booking-calendar">
-                <span class="check-label">Booking and calendar management</span>
+                <span class="check-label" data-i18n="airbnbFeatBooking">Booking and calendar management</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="airbnb_features" value="reviews">
-                <span class="check-label">Guest reviews and ratings</span>
+                <span class="check-label" data-i18n="airbnbFeatReviews">Guest reviews and ratings</span>
               </label>
             </div>
           </div>
@@ -511,94 +511,94 @@
 
         <!-- Section 3d: For Land sellers -->
         <section class="form-section section-vendor section-vendor-land" id="section-vendor-land" hidden>
-          <h2 class="section-title">For land sellers</h2>
+          <h2 class="section-title" data-i18n="vendorLandTitle">For land sellers</h2>
           <div class="field-group">
-            <label>How do you currently find buyers for your land? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="landMethods">How do you currently find buyers for your land?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="land_methods" value="agents">
-                <span class="check-label">Real estate / land agents</span>
+                <span class="check-label" data-i18n="landMethAgents">Real estate / land agents</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_methods" value="social-media">
-                <span class="check-label">Social media</span>
+                <span class="check-label" data-i18n="landMethSocial">Social media</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_methods" value="word-of-mouth">
-                <span class="check-label">Word of mouth</span>
+                <span class="check-label" data-i18n="landMethWord">Word of mouth</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_methods" value="signboards">
-                <span class="check-label">Signboards / physical ads</span>
+                <span class="check-label" data-i18n="landMethSignboards">Signboards / physical ads</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="land_methods" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="land_methods_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="land_methods_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
           <div class="field-group">
-            <label>What challenges do you face when selling land? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="landChallenges">What challenges do you face when selling land?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="land_challenges" value="finding-buyers">
-                <span class="check-label">Difficulty finding serious buyers</span>
+                <span class="check-label" data-i18n="landChBuyers">Difficulty finding serious buyers</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_challenges" value="pricing">
-                <span class="check-label">Unclear pricing / valuations</span>
+                <span class="check-label" data-i18n="landChPricing">Unclear pricing / valuations</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_challenges" value="documents">
-                <span class="check-label">Documentation and legal process</span>
+                <span class="check-label" data-i18n="landChDocs">Documentation and legal process</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_challenges" value="scams">
-                <span class="check-label">Fear of scams or fraud</span>
+                <span class="check-label" data-i18n="landChScams">Fear of scams or fraud</span>
               </label>
               <label class="checkbox-option checkbox-with-other">
                 <input type="checkbox" name="land_challenges" value="other" data-other-trigger>
-                <span class="check-label">Other</span>
-                <input type="text" name="land_challenges_other" class="input-inline" placeholder="Please specify" hidden>
+                <span class="check-label" data-i18n="other">Other</span>
+                <input type="text" name="land_challenges_other" class="input-inline" data-i18n-placeholder="pleaseSpecify" placeholder="Please specify" hidden>
               </label>
             </div>
           </div>
           <div class="field-group">
-            <label>Would you list your land (location, size, price, photos) on a digital platform for potential buyers?</label>
+            <label><span data-i18n="landWilling">Would you list your land (location, size, price, photos) on a digital platform for potential buyers?</span></label>
             <div class="radio-group">
               <label class="radio-option">
                 <input type="radio" name="land_willing" value="yes">
-                <span class="radio-label">Yes</span>
+                <span class="radio-label" data-i18n="yes">Yes</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="land_willing" value="no">
-                <span class="radio-label">No</span>
+                <span class="radio-label" data-i18n="no">No</span>
               </label>
               <label class="radio-option">
                 <input type="radio" name="land_willing" value="maybe">
-                <span class="radio-label">Maybe</span>
+                <span class="radio-label" data-i18n="maybe">Maybe</span>
               </label>
             </div>
           </div>
           <div class="field-group field-conditional" data-show-when="land_willing" data-show-values="yes,maybe">
-            <label>Which features would you want? <span class="hint">Select all that apply</span></label>
+            <label><span data-i18n="landFeatures">Which features would you want?</span> <span class="hint" data-i18n="selectAll">Select all that apply</span></label>
             <div class="checkbox-group">
               <label class="checkbox-option">
                 <input type="checkbox" name="land_features" value="verified-listings">
-                <span class="check-label">Verified land titles / documentation</span>
+                <span class="check-label" data-i18n="landFeatVerified">Verified land titles / documentation</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_features" value="maps">
-                <span class="check-label">Maps and location details</span>
+                <span class="check-label" data-i18n="landFeatMaps">Maps and location details</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_features" value="buyer-verification">
-                <span class="check-label">Buyer verification and safe transactions</span>
+                <span class="check-label" data-i18n="landFeatBuyer">Buyer verification and safe transactions</span>
               </label>
               <label class="checkbox-option">
                 <input type="checkbox" name="land_features" value="legal-support">
-                <span class="check-label">Legal and transfer support</span>
+                <span class="check-label" data-i18n="landFeatLegal">Legal and transfer support</span>
               </label>
             </div>
           </div>
