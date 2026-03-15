@@ -90,7 +90,7 @@
       var key = el.getAttribute('data-i18n');
       if (t[key] !== undefined) el.textContent = t[key];
     });
-    if (langToggle) langToggle.textContent = lang === 'sw' ? i18n.en.langToggleShowWhenSw : i18n.en.langToggle;
+    /* Floating button content set above via lang-flag and lang-text */
     var placeholders = form.querySelectorAll('[data-i18n-placeholder]');
     placeholders.forEach(function (el) {
       var key = el.getAttribute('data-i18n-placeholder');
@@ -102,6 +102,13 @@
     if (confirmText && t.confirmationText) confirmText.textContent = t.confirmationText;
     var footerP = document.querySelector('.survey-footer p');
     if (footerP && t.footer) footerP.textContent = t.footer;
+    var flagEl = document.getElementById('lang-flag');
+    var textEl = document.getElementById('lang-text');
+    if (langToggle) {
+      langToggle.title = lang === 'sw' ? 'Translate to English' : 'Translate to Swahili';
+      if (flagEl) flagEl.textContent = lang === 'sw' ? '🇬🇧' : '🇹🇿';
+      if (textEl) textEl.textContent = lang === 'sw' ? 'ENG' : 'SW';
+    }
   }
 
   if (langToggle) {

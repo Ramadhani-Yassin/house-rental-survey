@@ -88,28 +88,6 @@ body {
 }
 
 /* ----- Header ----- */
-.lang-toggle-wrap {
-  text-align: right;
-  margin-bottom: 0.75rem;
-}
-
-.lang-toggle {
-  font-family: inherit;
-  font-size: 0.85rem;
-  padding: 0.4rem 0.75rem;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: background var(--transition), border-color var(--transition);
-}
-
-.lang-toggle:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
 .survey-header {
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
@@ -568,6 +546,47 @@ textarea {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
+}
+
+/* ----- Floating language toggle (bottom left) ----- */
+.lang-float {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(26, 39, 68, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.lang-float:hover {
+  background: rgba(45, 106, 159, 0.95);
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lang-float:active {
+  transform: scale(0.98);
+}
+
+.lang-float-flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.lang-float-text {
+  letter-spacing: 0.02em;
 }
 
 /* ----- Hide form when confirmation is shown ----- */
