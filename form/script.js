@@ -16,7 +16,7 @@
 
   var i18n = {
     en: {
-      title: 'House Rental Platform Survey',
+      title: 'House Rental  Platform Survey',
       subtitle: 'Tanzania — Understanding demand for a digital rental platform',
       purpose: 'Your responses are confidential and will help shape a better way to find or list rental houses.',
       langToggle: 'Translate to Swahili',
@@ -49,8 +49,8 @@
       langToggleShowWhenSw: 'Translate to English'
     },
     sw: {
-      title: 'Kazi ya Uchunguzi — Jukwaa la Kukodisha Nyumba',
-      subtitle: 'Tanzania — Kuelewa mahitaji ya jukwaa la kidijitali la kukodisha nyumba',
+      title: 'Utafiti kuhusu uhitaji— Mfumo wa Kukodisha Nyumba',
+      subtitle: 'Tafiti — Kuelewa mahitaji ya mfumo wa  kidijitali la kukodisha nyumba',
       purpose: 'Majibu yako ni ya siri na yatasaidia kuunda njia bora ya kupata au kuorodhesha nyumba za kukodisha.',
       langToggle: 'Tafsiri kwa Kiingereza',
       respondentDetails: 'Taarifa za mhojiwa',
