@@ -14,6 +14,11 @@
 
   let currentLang = 'en';
 
+  // ——— Form submission: Formspree (or Google Sheets) ———
+  // 1. Formspree: Sign up at https://formspree.io → New form → copy your form endpoint.
+  // 2. Paste it below (replace the placeholder). Leave as '' to only log to console.
+  var SUBMIT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3MFle9_R23oCnc5RE86rT4JiGKAYJVbKuuVhaie8cmHTkLpDnPW-73gGE6Ox7KRGK/exec';
+
   var i18n = {
     en: {
       title: 'House Rental  Platform Survey',
@@ -43,6 +48,8 @@
       suggestionsLabel: 'Suggestions for features or services you\'d like on a house rental platform',
       suggestionsPlaceholder: 'Share your ideas…',
       submitSurvey: 'Submit survey',
+      sending: 'Sending…',
+      submitError: 'Something went wrong. Please try again or submit later.',
       thankYou: 'Thank you',
       confirmationText: 'Your response has been recorded. Your feedback helps us understand demand for a better house rental platform in Tanzania.',
       footer: 'Confidential • Tanzania House Rental Survey',
@@ -165,6 +172,8 @@
       suggestionsLabel: 'Mapendekezo ya vipengele au huduma ungependa kwenye jukwaa la kukodisha nyumba',
       suggestionsPlaceholder: 'Shiriki mawazo yako…',
       submitSurvey: 'Tuma uchunguzi',
+      sending: 'Inatumwa…',
+      submitError: 'Hitilafu imetokea. Tafadhali jaribu tena au tuma baadaye.',
       thankYou: 'Asante',
       confirmationText: 'Jibu lako limeandikwa. Maoni yako yanatusaidia kuelewa mahitaji ya jukwaa bora la kukodisha nyumba Tanzania.',
       footer: 'Siri • Uchunguzi wa Kukodisha Nyumba Tanzania',
@@ -404,10 +413,7 @@
     });
   });
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    updateConditionalFields();
-    if (!validateBeforeSubmit()) return;
+  function buildPayload() {
     var payload = {};
     form.querySelectorAll('input, textarea, select').forEach(function (el) {
       if (!el.name) return;
@@ -427,11 +433,65 @@
     Object.keys(payload).forEach(function (k) {
       if (Array.isArray(payload[k]) && payload[k].length === 1) payload[k] = payload[k][0];
     });
+    return payload;
+  }
+
+  function showSubmitState(button, loading) {
+    button.disabled = loading;
+    button.textContent = (i18n[currentLang] || i18n.en).sending;
+    if (!loading) {
+      button.textContent = (i18n[currentLang] || i18n.en).submitSurvey;
+    }
+  }
+
+  function showSubmitError(button, message) {
+    button.disabled = false;
+    button.textContent = (i18n[currentLang] || i18n.en).submitSurvey;
+    alert(message);
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    updateConditionalFields();
+    if (!validateBeforeSubmit()) return;
+
+    var payload = buildPayload();
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var t = i18n[currentLang] || i18n.en;
+    var endpoint = (SUBMIT_ENDPOINT || '').trim();
+
     console.log('Survey payload:', payload);
-    main.classList.add('form-submitted');
-    confirmation.hidden = false;
-    confirmation.classList.add('reveal');
-    confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    if (!endpoint) {
+      main.classList.add('form-submitted');
+      confirmation.hidden = false;
+      confirmation.classList.add('reveal');
+      confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    showSubmitState(submitBtn, true);
+
+    // Send as form-encoded so Google Apps Script receives body (JSON in POST can be lost on redirect)
+    var body = 'data=' + encodeURIComponent(JSON.stringify(payload));
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Submit failed');
+        main.classList.add('form-submitted');
+        confirmation.hidden = false;
+        confirmation.classList.add('reveal');
+        confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      })
+      .catch(function () {
+        showSubmitError(submitBtn, t.submitError);
+      })
+      .finally(function () {
+        showSubmitState(submitBtn, false);
+      });
   });
 
   updateSectionsByRole();
