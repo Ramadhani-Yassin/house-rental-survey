@@ -480,14 +480,21 @@
       body: body
     })
       .then(function (res) {
-        if (!res.ok) throw new Error('Submit failed');
-        main.classList.add('form-submitted');
-        confirmation.hidden = false;
-        confirmation.classList.add('reveal');
-        confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        return res.text().then(function (text) {
+          var data;
+          try { data = text ? JSON.parse(text) : {}; } catch (err) { data = {}; }
+          console.log('Server response:', data);
+          if (!res.ok) throw new Error(data.error || 'Submit failed');
+          if (data.error) throw new Error(data.error);
+          main.classList.add('form-submitted');
+          confirmation.hidden = false;
+          confirmation.classList.add('reveal');
+          confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
       })
-      .catch(function () {
-        showSubmitError(submitBtn, t.submitError);
+      .catch(function (err) {
+        console.error('Submit error:', err);
+        showSubmitError(submitBtn, err.message || t.submitError);
       })
       .finally(function () {
         showSubmitState(submitBtn, false);
